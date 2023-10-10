@@ -6,26 +6,34 @@ public class QuizOneCodingChallenge : MonoBehaviour
 {
     public int Score = 0;
     public string PlayerName = "George";
-    private void IncreaseScore;
+    private int Health = 100;
     // Start is called before the first frame update
     void Start()
     {
-        
+        IncreaseScore();
+        PrintPlayerName();
+        DecreaseHealth();
     }
 
     // Update is called once per frame
-    private void IncreaseScore()
-    {
-        Score+=10; 
-    }
-
+   
     void Update()
     {
         
     }
 
-    public void PrintPlayerName("PlayerName")
+    private void IncreaseScore()
     {
-        
+        Score += 10;
+    }
+
+    private void PrintPlayerName()
+    {
+        Debug.Log(PlayerName);
+    }
+
+    private void DecreaseHealth()
+    {
+        Health -= 20;
     }
 }
